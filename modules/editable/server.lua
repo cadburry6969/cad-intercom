@@ -1,7 +1,7 @@
 local inventory = exports[Config.InventoryName]
 
 function GetName(src)
-    return 'Unknown'
+    return 'Not configured'
 end
 
 function RemoveMoney(src, amount)

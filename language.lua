@@ -6,4 +6,5 @@ Lang = {
     invalid_type = 'Invalid Type',
     not_enough_money = 'You dont have enough money',
     purchase_intercom = '[E] Purchase Intercom',
+    not_authorized = 'You are not authorized',
 }

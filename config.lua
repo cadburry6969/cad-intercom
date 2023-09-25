@@ -5,6 +5,7 @@ Config.Types = {
 }
 
 Config.SaveMessages = false
+Config.DeleteMessages = false
 
 Config.InventoryName = 'ox_inventory'
 Config.InventoryMetaType = 'Channel'
@@ -33,7 +34,7 @@ Config.SendMessageCommand = true
 Config.SendMessageCommands = {
     -- type = { command, suggestion, job _check }
     ['police'] = {
-        command = 'pdchat',
+        command = 'pd',
         suggestion = {
             help = 'Police Intercom Chat',
             arguments = {

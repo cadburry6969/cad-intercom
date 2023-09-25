@@ -38,7 +38,7 @@ RegisterNetEvent('intercom:showMessage', function(type, data)
         position = Config.ShowMenu.position,
         options = options
     }, function(selected, scrollIndex, args)
-        if selected then
+        if selected and Config.DeleteMessages then
             local alert = lib.alertDialog({
                 content = Lang.are_you_sure,
                 centered = true,
@@ -56,7 +56,7 @@ exports('useItem', function(data, item)
     local hasDurability = item.metadata.durability[1]
     if hasDurability < 1 then return end
     if not item.metadata.type or not item.metadata.typeName then return Notify(Lang.invalid_type) end
-    if not HasJob(item.metadata.type) then return end
+    if not HasJob(item.metadata.type) then return Notify(Lang.not_authorized) end
     showIntercomMenu(item.metadata.type)
 end)
 exports[Config.InventoryName]:displayMetadata('typeName', Config.InventoryMetaType)

@@ -21,7 +21,7 @@ end
 
 RegisterNetEvent('intercom:displayMessage', function(type, data)
     -- data.message, data.date, data.name
-    if not HasIntercom(type) or HasJob(type) then return end
+    if not HasIntercom(type) or not HasJob(type) then return end
     TriggerEvent('chat:addMessage', {
         color = { 255, 155, 155},
         multiline = true,
